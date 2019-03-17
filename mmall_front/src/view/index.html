@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
-<%= require('html-loader!./layout/html-header.html') %>
+    <head>
+        <%= require('html-loader!./layout/html-header.html') %>
+        <title>happymmall</title>
+    </head>
 <body>
-	ssssssdsdsdadsadsssssssssssjiji
-  <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.2.3/jquery.min.js">
-  </script>
-
-zzzzzzzzzzzzzz
+	<%= require('html-loader!./layout/nav.html') %>
+    <div>
+	     <i class="fa fa-user"></i>
+    </div>
+	<%= require('html-loader!./layout/footer.html') %>
 </body>
 </html>
 
