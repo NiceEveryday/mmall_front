@@ -2,6 +2,13 @@
 'use strict'
 require('page/common/nav-simple/index.js')
 require('page/common/nav/nav.js')
+require('page/common/footer/footer.css')
+require('page/common/header/header.js')
+var navSide = require('page/common/nav-side/nav_side.js')
+
+navSide.init({
+	name : 'user-center'
+})
 // console.log('util')
 // var _mm = require('util/mm.js')
 // console.log(JSON.stringify(_mm))
