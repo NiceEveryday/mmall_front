@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%= require('html-loader!./layout/html-header.html') %>
+        <title>happymmall</title>
+    </head>
+<body>
+	<%= require('html-loader!./layout/nav-simple.html') %>
+	<div class="page-wrap">
+		<div class="w">
+			<label class="login-label">用户登录</label>
+			<div class="error">	
+                <i class="fa fa-minus-circle error-icon"></i>
+                <p class="error-msg">error</p>
+			</div>
+			<div class='input'>
+				<i class="fa fa-user"></i>
+				<input class="username" name="username" placeholder="请输入账号" />
+			</div>
+			<div class='input'>
+				<i class="fa fa-lock"></i>
+				<input class="password" type='password' 
+				name="username" placeholder="请输入密码" />
+			</div>
+			<div class="link-item">	
+                <a class='link' href='./user-pass-reset.html'>忘记密码</a>
+                <a class='link' href='./register.html'>免费注册</a>
+			</div>
+		</div>
+	</div>
+	<%= require('html-loader!./layout/footer.html') %>
+</body>
+</html>
+
