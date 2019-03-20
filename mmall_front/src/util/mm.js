@@ -10,15 +10,17 @@ var _mm = {
        	type  : param.method       ||  'get',
        	url      : param.url       ||  '',
        	dataType : param.dataType  ||  'json',
-        // data     : param.data || '',
+        data     : param.data || '',
         success : function(res){
-          console.log('sussccesss')
           console.log(JSON.stringify(res))
         	if(res.status === 0){
         		  typeof param.success === 'function' && param.success(res)
         	}else if(res.status === 10){
                 _this.doLogin()
-        	}
+        	}// 请求数据错误
+          else if(1 === res.status){
+            typeof param.error === 'function' && param.error(res.msg);
+          }
         },
         error : function(err){
               typeof param.error === 'function' && param.error(err.status)
@@ -53,7 +55,7 @@ var _mm = {
       }else if(type === "phone"){
            return /^1\d{10}$/.test(value);  
       }else if(type === "email"){
-           return /^1\d{10}$/.test(value);  
+           return /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/.test(value);  
       }
   },
   goHome : function(){
